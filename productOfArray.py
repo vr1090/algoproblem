@@ -21,4 +21,9 @@ def productExceptSelf(arr):
 
     return total
 
-print(productExceptSelf([2,5,3,4]))
+
+def main():
+    print(productExceptSelf([2,5,3,4]))
+
+if __name__ == "__main__":
+    main()
