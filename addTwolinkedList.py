@@ -19,12 +19,14 @@ def addTwoLinkedLists(list1, list2):
     head = None
     current = None
     carrieOver = 0
-    while nextA is not None or nextB is not None:
-        data = nextA.data + nextB.data + carrieOver
+    while nextA is not None or nextB is not None or carrieOver > 0:
+        valueA = nextA.data if nextA else 0
+        valueB = nextB.data if nextB else 0
+        data = valueA + valueB + carrieOver
         carrieOver = data // 10
         cleanData = data % 10
-        nextA = nextA.next
-        nextB = nextB.next
+        nextA = nextA.next if nextA else None
+        nextB = nextB.next if nextB else None
         newNode = Node(cleanData)
 
         if current is None:
@@ -36,10 +38,7 @@ def addTwoLinkedLists(list1, list2):
         if head is None:
             head = current
     
-    if carrieOver > 0 :
-        addNode = Node(carrieOver)
-        current.next = addNode
-        current = addNode
+    
         
     newLinkedList.head = head
     
