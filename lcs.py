@@ -16,6 +16,7 @@ def lcs(str1, str2,i=0,j=0, memoization={}):
 
 def main():
     assert(4 == lcs("abcd","abcd"))
+    assert(2 == lcs("abgcdadga", "cdff"))
 
 if __name__=="__main__":
     main()
