@@ -1,0 +1,56 @@
+get permutation [1, 2, 3]
+get permutation [2, 3]
+get permutation [3]
+sub ermutation [[3]] yg di pop 2
+get permutation []
+sub ermutation [[]] yg di pop 3
+result [[3, 2], [3]]
+sub ermutation [[3, 2], [3]] yg di pop 1
+Traceback (most recent call last):
+
+
+
+get permutation [1, 2, 3]
+get permutation [2, 3]
+get permutation [3]
+sub ermutation [[3]] yg di pop 2
+get permutation []
+sub ermutation [[]] yg di pop 3
+result [[3, 2], [3]]
+sub ermutation [[3, 2], [3]] yg di pop 1
+Traceback (most recent call last):
+  File "arrayPermutation.py", line 33, in <module>
+    main()
+  File "arrayPermutation.py", line 26, in main
+    result = getPermutations(cupu)
+  File "arrayPermutation.py", line 12, in getPermutations
+    n = arr.pop(0)
+
+IndexError: pop from empty list
+
+
+
+➜  algoproblem git:(main) ✗ python3 arrayPermutation.py
+get permutation [1, 2, 3]
+get permutation [2, 3]
+get permutation [3]
+sub ermutation [[3]] yg di pop 2
+get permutation [2]
+sub ermutation [[2]] yg di pop 3
+result [[3, 2], [2, 3]]
+sub ermutation [[3, 2], [2, 3]] yg di pop 1
+get permutation [3, 1]
+get permutation [1]
+sub ermutation [[1]] yg di pop 3
+get permutation [3]
+sub ermutation [[3]] yg di pop 1
+result [[1, 3], [3, 1]]
+sub ermutation [[1, 3], [3, 1]] yg di pop 2
+get permutation [1, 2]
+get permutation [2]
+sub ermutation [[2]] yg di pop 1
+get permutation [1]
+sub ermutation [[1]] yg di pop 2
+result [[2, 1], [1, 2]]
+sub ermutation [[2, 1], [1, 2]] yg di pop 3
+result [[3, 2, 1], [2, 3, 1], [1, 3, 2], [3, 1, 2], [2, 1, 3], [1, 2, 3]]
