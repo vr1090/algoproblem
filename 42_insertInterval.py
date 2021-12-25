@@ -26,3 +26,4 @@ def insertInterval(interval, newInterval):
     return result
 
 def main():
+    pass
