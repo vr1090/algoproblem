@@ -31,10 +31,10 @@ def search(board, word, i, j, count, visited):
 
     visited.add((i,j))
     if search(board, word, i+1,j, count+1, visited) or \
-        search(board, word,i-1, j, count+1, visited) or \
-         search(board, word,i, j+1, count+1, visited) or \
-             search(board, word, i, j-1, count+1, visited):
-             return True
+       search(board, word,i-1, j, count+1, visited) or \
+       search(board, word,i, j+1, count+1, visited) or \
+       search(board, word, i, j-1, count+1, visited):
+           return True
     else:
          visited.remove( (i,j))
     return False
