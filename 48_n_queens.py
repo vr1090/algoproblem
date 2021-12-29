@@ -6,29 +6,34 @@ def _n_queens(n, board, row):
     if n == row:
         return 1
     
-    sum =0
+    sum = 0
 
-    for i in range(n):
-        if isNotAttacked(board, i,row):
-            board[row][i] = "Q"
+    for col in range(n):
+        if isNotAttacked(board,col, row):
+            board[row][col]="Q"
             sum += _n_queens(n, board, row+1)
-            board[row][i]="."
+            board[row][col]=""
     return sum
 
 def isNotAttacked(board, col, row):
-    left =col -1
-    right = col + 1
     i = row -1
+    leftWing = col -1
+    rightWing = col + 1
 
+    #mundur terus bang
     while i >= 0 :
-        if board[i][col] == "Q" or (left >=0 and board[i][left] == "Q") or (right < len(board) and board[i][right]=="Q"):
+        if board[i][col] == "Q":
+            return False
+        elif leftWing >=0 and board[i][leftWing] == "Q":
+            return False
+        elif rightWing < len(board) and board[i][rightWing] == "Q":
             return False
         else:
-            i = i-1
-            left = left -1
-            right = right +1
-    
+            i -= 1
+            leftWing -= 1
+            rightWing += 1
     return True
+
 
 def main():
     result = nQueens(4)
