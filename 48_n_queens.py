@@ -31,7 +31,7 @@ def isNotAttacked(board, col, row):
     return True
 
 def main():
-    result = n_queens(4)
+    result = nQueens(4)
     print(result)
     assert(2 == result)
 
