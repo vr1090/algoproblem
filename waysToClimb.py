@@ -119,7 +119,7 @@ def search(board, word, i, j, count, visited):
              return True
     else:
          visited.remove( (i,j))
-    return Fals# Parameters:
+    return False# Parameters:
 #  board: List[List[char]]
 #  word: str
 # return type: bool
